@@ -12,3 +12,12 @@
 ### Accessing the urls
 	https://localhost:8761/
 	https://localhost:9001/isup
+
+
+# Key store and Trust store creation
+	Refer below file
+	![link] https://github.com/bhatsac/microservices-https-setup-sample/blob/master/keytool%20generation%20commands.txt
+	
+	
+	
+	
