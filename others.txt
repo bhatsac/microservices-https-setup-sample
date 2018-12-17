@@ -1,0 +1,53 @@
+keytool -exportcert -rfc -alias eurekacert -file eurekacert.cer -keystore eureka.jks -storepass eureka
+
+
+keytool -export -alias keyAlias-storepass eureka -file eureka.cer -keystore eureka.jks
+
+
+keytool -export -alias keyAlias-storepass eureka 
+ -file eureka.cer
+ -keystore eureka.jks
+
+
+keytool -export -alias eureka -file eureka.cer -keystore eureka.jks
+
+
+keytool -import -alias client -file client.cer -keystore eurekaTrustStore.jks –storepass eureka
+
+keytool -import -alias eureka -file eureka.cer -keystore clientTrustStore.jks –storepass client
+
+
+com.sun.jersey.api.client.ClientHandlerException: PKIX path building failed: sun.security.prov
+
+keytool -genkey -alias client -keyalg RSA -storetype PKCS12 -keystore client.jks -ext SAN=dns:localhost,ip:127.0.0.1 -keysize 2048 -validity 365
+
+
+keytool -genkey -alias client -keystore client.jks -keyalg RSA -keysize 2048 -validity 365 -ext SAN=dns:localhost,ip:127.0.0.1
+keytool -genkey -alias clientTrustStore -keystore clientTrustStore.jks -keyalg RSA -keysize 2048 -validity 365 -ext SAN=dns:localhost,ip:127.0.0.1
+keytool -genkey -alias eureka -keystore eureka.jks -keyalg RSA -keysize 2048 -validity 365 -ext SAN=dns:localhost,ip:127.0.0.1
+keytool -genkey -alias eurekaTrustStore -keystore eurekaTrustStore.jks -keyalg RSA -keysize 2048 -validity 365 -ext SAN=dns:localhost,ip:127.0.0.1
+
+keytool -export -alias client -file client.cer -keystore client.jks
+keytool -export -alias eureka -file eureka.cer -keystore eureka.jks
+
+keytool -import -alias eureka -file eureka.cer -keystore clientTrustStore.jks -storepass client
+keytool -import -alias client -file client.cer -keystore eurekaTrustStore.jks -storepass eureka
+
+
+
+keytool -export -alias keyAlias-storepass client -file client.cer -keystore client.jks
+keytool -export -alias keyAlias-storepass eureka -file eureka.cer -keystore eureka.jks
+
+
+keytool -exportcert -rfc -alias clientcert -file clientcert.cer -keystore client.jks -storepass client
+keytool -exportcert -rfc -alias eurekacert -file eurekacert.cer -keystore eureka.jks -storepass eureka
+
+
+keytool -exportcert -rfc -alias eurekacert -file eurekacert.cer -keystore eureka.jks -storepass eureka
+
+
+
+keytool -import -alias client -file client.cer -keystore eurekaTrustStore.jks –storepass eureka
+
+
+keytool -import -alias client -file client.cer -keystore eurekaTrustStore.jks –storepass eureka
