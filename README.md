@@ -9,6 +9,6 @@
 
 ### Running the set up.
 	Run both the projects (eureka-discovery-https & eureka-client-https) as spring boot projets in the same order as it has  to be.
-#### Accessing the urls
+### Accessing the urls
 	https://localhost:8761/
 	https://localhost:9001/isup
