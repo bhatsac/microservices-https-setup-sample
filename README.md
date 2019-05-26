@@ -19,5 +19,7 @@
 	![link] https://github.com/bhatsac/microservices-https-setup-sample/blob/master/keytool%20generation%20commands.txt
 	
 	
-	
+# Also Check
+	https://www.baeldung.com/x-509-authentication-in-spring-security
+	https://github.com/eugenp/tutorials/tree/master/spring-security-x509
 	
